@@ -1,4 +1,4 @@
-# atomshell-react-template
+# atomshell-react-boilerplate
 Atom-Shell app using React.js
 
 # How to develop

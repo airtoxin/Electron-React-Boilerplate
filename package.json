@@ -1,5 +1,5 @@
 {
-  "name": "atomshell-react-template",
+  "name": "atomshell-react-boilerplate",
   "version": "0.0.1",
   "description": "Atom-Shell app using React.js",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/airtoxin/atomshell-react-template.git"
+    "url": "https://github.com/airtoxin/atomshell-react-boilerplate.git"
   },
   "author": "airtoxin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/airtoxin/atomshell-react-template/issues"
+    "url": "https://github.com/airtoxin/atomshell-react-boilerplate/issues"
   },
-  "homepage": "https://github.com/airtoxin/atomshell-react-template",
+  "homepage": "https://github.com/airtoxin/atomshell-react-boilerplate",
   "dependencies": {
     "react": "^0.12.2"
   },
