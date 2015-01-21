@@ -1,0 +1,30 @@
+{
+  "name": "atomshell-react-template",
+  "version": "0.0.1",
+  "description": "Atom-Shell app using React.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/airtoxin/atomshell-react-template.git"
+  },
+  "author": "airtoxin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/airtoxin/atomshell-react-template/issues"
+  },
+  "homepage": "https://github.com/airtoxin/atomshell-react-template",
+  "dependencies": {
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-atom": "0.0.5",
+    "gulp-install": "^0.2.0",
+    "gulp-less": "^2.0.1",
+    "gulp-react": "^2.0.0",
+    "require-dir": "^0.1.0"
+  }
+}
