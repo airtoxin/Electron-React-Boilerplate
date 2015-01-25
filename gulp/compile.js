@@ -1,8 +1,7 @@
 var gulp = require( 'gulp' );
 
 gulp.task( 'compile', [
-	'react',
-	'install',
+	'browserify',
 	'through',
 	'less'
 ] );

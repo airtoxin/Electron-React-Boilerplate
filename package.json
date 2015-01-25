@@ -20,11 +20,13 @@
     "react": "^0.12.2"
   },
   "devDependencies": {
+    "browserify": "^8.1.1",
     "gulp": "^3.8.10",
     "gulp-atom": "0.0.5",
-    "gulp-install": "^0.2.0",
     "gulp-less": "^2.0.1",
-    "gulp-react": "^2.0.0",
-    "require-dir": "^0.1.0"
+    "react": "^0.12.2",
+    "reactify": "^1.0.0",
+    "require-dir": "^0.1.0",
+    "vinyl-source-stream": "^1.0.0"
   }
 }
