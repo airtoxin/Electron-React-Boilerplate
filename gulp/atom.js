@@ -6,7 +6,7 @@ gulp.task( 'atom', function () {
 		srcPath: './compile',
 		releasePath: './build',
 		cachePath: './cache',
-		version: 'v0.20.6',
+		version: 'v0.25.2',
 		rebuild: false,
 		platforms: [ 'darwin-x64' ]
 	} );
