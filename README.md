@@ -1,6 +1,7 @@
 # Electron-React-Boilerplate
 Electron app with React.js
 
+![](./docs/screenshot.png)
 # How to develop
 1. `npm i`
 2. `npm start`
