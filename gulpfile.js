@@ -5,10 +5,7 @@ var runSequence = require('run-sequence');
 requireDir( './gulp' );
 
 function watchAndRebuild() {
-	var watcher = gulp.watch( ['./compile/**/*'], [ 'build' ] );
-	watcher.on('change', function(event) {
-	  console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-	});
+	gulp.watch( ['./compile/**/*'], [ 'build' ] );
 }
 
 function watchAndRecompile() {
