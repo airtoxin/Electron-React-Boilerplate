@@ -2,30 +2,44 @@ var gulp = require('gulp');
 var atom = require('gulp-atom');
 var symlink = require('gulp-sym');
 var fs = require('fs');
+var path = require('path');
 var runSequence = require('run-sequence');
 
-var s = {
+var settings = {
 	srcPath: './compile',
 	releasePath: './build',
 	cachePath: './cache',
 	version: 'v0.26.0',
 	rebuild: false,
-	platforms: ['darwin-x64'] // Set at the first place your dev platform for correct linking of resources
-}
-var appPath = s.releasePath + '/' + s.version + '/' + s.platforms[0] + '/Electron.app/Contents/Resources/app';
+	platforms: ['darwin-x64']
+};
+
+var platformPath = function(platform) {
+	return path.join(
+		settings.releasePath, 
+		settings.version,
+		platform,
+		'/Electron.app/Contents/Resources/app'
+	);
+};
+var platforms = settings.platforms.map(function(platform){
+	return platformPath(platform);
+});
 
 
 gulp.task('atom-deploy', function() {
 	try { 
-		fs.unlinkSync(appPath); 
+		platforms.forEach(fs.unlinkSync);
 	} catch(err){}
-	return atom(s);
+	return atom(settings);
 });
 
 gulp.task('atom-soft', function() {
 	return gulp
-		.src(s.srcPath)
-		.pipe(symlink(appPath, { force: true }));
+		.src(settings.platforms.map(function(){
+			return settings.srcPath;
+		}))
+		.pipe(symlink(platforms, { force: true }));
 });
 
 gulp.task('atom', function(){
