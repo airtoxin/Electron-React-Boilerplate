@@ -11,20 +11,30 @@ var settings = {
 	cachePath: './cache',
 	version: 'v0.26.0',
 	rebuild: false,
-	platforms: ['darwin-x64']
+	platforms: ['win32-ia32', 'darwin-x64']
 };
 
 var platformPath = function(platform) {
+	var resourcesPath;
+	switch (platform) {
+		// OS X
+		case 'darwin':
+		case 'darwin-x64':
+			resourcesPath = path.join('Electron.app', 'Contents', 'Resources', 'app');
+			break;
+		// Windows, Linux
+		default:
+			resourcesPath = path.join('resources', 'app');
+			break;
+	}
 	return path.join(
 		settings.releasePath, 
 		settings.version,
 		platform,
-		'/Electron.app/Contents/Resources/app'
+		resourcesPath
 	);
 };
-var platforms = settings.platforms.map(function(platform){
-	return platformPath(platform);
-});
+var platforms = settings.platforms.map(platformPath);
 
 
 gulp.task('atom-deploy', function() {

@@ -4,8 +4,7 @@
   "description": "Electron(Atom-Shell) app using React.js",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
-    "install-atom": "gulp atom"
+    "start": "gulp atom && gulp"
   },
   "repository": {
     "type": "git",
