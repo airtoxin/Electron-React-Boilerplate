@@ -11,7 +11,7 @@ var settings = {
 	cachePath: './cache',
 	version: 'v0.26.0',
 	rebuild: false,
-	platforms: ['win32-ia32', 'darwin-x64']
+	platforms: ['darwin-x64', 'win32-ia32'] // When compiling on Mac darwin should be on first place or else gulp-atom module will fail
 };
 
 var platformPath = function(platform) {
