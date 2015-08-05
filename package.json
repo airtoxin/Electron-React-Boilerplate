@@ -16,17 +16,17 @@
     "url": "https://github.com/airtoxin/atomshell-react-boilerplate/issues"
   },
   "homepage": "https://github.com/airtoxin/atomshell-react-boilerplate",
-  "dependencies": {},
-  "devDependencies": {
-    "browserify": "^10.1.3",
-    "gulp": "^3.8.11",
+  "dependencies": {
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
     "gulp-atom": "^0.1.0",
     "gulp-install": "^0.4.0",
     "gulp-less": "^3.0.3",
-    "react": "^0.13.2",
-    "reactify": "^1.1.0",
+    "react": "^0.14.0-beta3",
+    "reactify": "^1.1.1",
     "require-dir": "^0.3.0",
-    "run-sequence": "^1.1.0",
+    "run-sequence": "^1.1.2",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "devDependencies": {}
 }
