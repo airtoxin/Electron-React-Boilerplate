@@ -5,7 +5,7 @@ var runSequence = require('run-sequence');
 requireDir( './gulp' );
 
 function watchAndRebuild() {
-	gulp.watch( ['./compile/**/*'], [ 'build' ] );
+	gulp.watch( ['./compile/**/*', '!./compile/node_modules/**/*'], [ 'build' ] );
 }
 
 function watchAndRecompile() {
