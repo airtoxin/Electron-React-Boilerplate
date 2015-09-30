@@ -1,6 +1,6 @@
 var gulp = require( 'gulp' );
 var jscs = require( 'gulp-jscs' );
-var files_matcher = [ './component/**/*.js', './*.js' ];
+var files_matcher = [ 'component/**/*.js', 'gulp/**/*.js', '*.js' ];
 
 gulp.task( 'check-syntax', function() { 
   return gulp.src(files_matcher)
@@ -9,10 +9,10 @@ gulp.task( 'check-syntax', function() {
 } );
 
 gulp.task( 'refactor', function() {
-  return gulp.src(files_matcher)
-    .pipe(jscs({
+  return gulp.src(files_matcher, { base: './' })
+    .pipe(jscs({ 
       fix: true
     }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('.'));
 } );
 
