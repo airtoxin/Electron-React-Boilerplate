@@ -1,3 +1,5 @@
+'use babel';
+
 var app = require('app');
 var Menu = require('menu');
 var MenuItem = require('menu-item');

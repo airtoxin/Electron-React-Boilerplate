@@ -28,5 +28,7 @@
     "run-sequence": "^1.1.2",
     "vinyl-source-stream": "^1.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel": "^5.8.23"
+  }
 }
