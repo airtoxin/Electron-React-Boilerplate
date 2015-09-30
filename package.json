@@ -4,7 +4,10 @@
   "description": "Electron(Atom-Shell) app using React.js",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "lint": "gulp lint",
+    "syntax": "gulp check-syntax",
+    "refactor": "gulp refactor"
   },
   "repository": {
     "type": "git",
@@ -28,5 +31,9 @@
     "run-sequence": "^1.1.2",
     "vinyl-source-stream": "^1.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "gulp-eslint": "^1.0.0",
+    "gulp-jscs": "^3.0.0"
+  }
 }
