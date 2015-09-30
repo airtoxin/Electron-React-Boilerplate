@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
+    "lint": "gulp lint",
     "syntax": "gulp check-syntax",
     "refactor": "gulp refactor"
   },
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "babel": "^5.8.23",
+    "gulp-eslint": "^1.0.0",
     "gulp-jscs": "^3.0.0"
   }
 }
