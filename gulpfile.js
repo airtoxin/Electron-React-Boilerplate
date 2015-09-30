@@ -20,7 +20,7 @@ gulp.task( 'watch-all', function () {
 } );
 
 gulp.task( 'watch-compile-build', function () {
-  runSequence('compile', 'build', 'watch-all')
+  runSequence('compile', 'build', 'watch-all');
 } );
 
 gulp.task( 'watch-compile', [ 'build' ], watchAndRecompile );
