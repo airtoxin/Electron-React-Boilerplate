@@ -7,6 +7,7 @@
     "start": "gulp",
     "lint": "gulp lint",
     "syntax": "gulp check-syntax",
+    "clean": "rm -rf build/* compile/*",
     "refactor": "gulp refactor"
   },
   "repository": {
