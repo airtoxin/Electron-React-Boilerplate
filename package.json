@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gulp",
     "lint": "gulp lint",
+    "transpile": "gulp transpile",
     "syntax": "gulp check-syntax",
     "clean": "rm -rf build/* compile/*",
     "refactor": "gulp refactor"
@@ -34,6 +35,7 @@
   },
   "devDependencies": {
     "babel": "^5.8.23",
+    "gulp-babel": "^5.2.1",
     "gulp-eslint": "^1.0.0",
     "gulp-jscs": "^3.0.0"
   }

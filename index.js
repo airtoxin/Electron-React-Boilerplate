@@ -1,29 +1,27 @@
 'use babel';
 
-var app = require('app');
-var Menu = require('menu');
-var MenuItem = require('menu-item');
-var BrowserWindow = require('browser-window');
+import app from 'app';
+import Menu from 'menu';
+import MenuItem from 'menu-item';
+import BrowserWindow from 'browser-window';
 
 require('crash-reporter').start();
-
-var mainWindow = null;
 
 app.on('window-all-closed', function() {
   if (process.platform !== 'darwin') app.quit();
 });
 
-app.on('ready', function() {
-  mainWindow = new BrowserWindow({
+app.on('ready', () => {
+  const mainWindow = new BrowserWindow({
     width: 480,
     height: 360,
     'min-width': 480,
     'min-height': 280,
     frame: true,
   });
-  mainWindow.loadUrl('file://' + __dirname + '/index.html');
+  mainWindow.loadUrl(`file://${__dirname}/index.html`);
   mainWindow.on('closed', function() {
-    mainWindow = null;
+    //mainWindow = null;
   });
 
   // Example of menu from official sample
@@ -152,7 +150,7 @@ app.on('ready', function() {
       },],
     },];
 
-    menu = Menu.buildFromTemplate(template);
+    const menu = Menu.buildFromTemplate(template);
     Menu.setApplicationMenu(menu);
   } else {
     var template = [{
@@ -212,7 +210,7 @@ app.on('ready', function() {
         },
       },],
     },];
-    menu = Menu.buildFromTemplate(template);
+    const menu = Menu.buildFromTemplate(template);
     mainWindow.setMenu(menu);
   }
 });
