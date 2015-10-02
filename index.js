@@ -7,7 +7,7 @@ import BrowserWindow from 'browser-window';
 
 require('crash-reporter').start();
 
-app.on('window-all-closed', function() {
+app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
 
@@ -20,7 +20,7 @@ app.on('ready', () => {
     frame: true,
   });
   mainWindow.loadUrl(`file://${__dirname}/index.html`);
-  mainWindow.on('closed', function() {
+  mainWindow.on('closed', () => {
     //mainWindow = null;
   });
 
@@ -55,7 +55,7 @@ app.on('ready', () => {
       }, {
         label: 'Quit',
         accelerator: 'Command+Q',
-        click: function() {
+        click: () => {
           app.quit();
         },
       },],
@@ -93,19 +93,19 @@ app.on('ready', () => {
       submenu: [{
         label: 'Reload',
         accelerator: 'Command+R',
-        click: function() {
+        click: () => {
           mainWindow.restart();
         },
       }, {
         label: 'Toggle Full Screen',
         accelerator: 'Ctrl+Command+F',
-        click: function() {
+        click: () => {
           mainWindow.setFullScreen(!mainWindow.isFullScreen());
         },
       }, {
         label: 'Toggle Developer Tools',
         accelerator: 'Alt+Command+I',
-        click: function() {
+        click: () => {
           mainWindow.toggleDevTools();
         },
       },],
@@ -129,22 +129,22 @@ app.on('ready', () => {
       label: 'Help',
       submenu: [{
         label: 'Learn More',
-        click: function() {
+        click: () => {
           require('shell').openExternal('http://electron.atom.io');
         },
       }, {
         label: 'Documentation',
-        click: function() {
+        click: () => {
           require('shell').openExternal('https://github.com/atom/electron/tree/master/docs#readme');
         },
       }, {
         label: 'Community Discussions',
-        click: function() {
+        click: () => {
           require('shell').openExternal('https://discuss.atom.io/c/electron');
         },
       }, {
         label: 'Search Issues',
-        click: function() {
+        click: () => {
           require('shell').openExternal('https://github.com/atom/electron/issues');
         },
       },],
@@ -161,7 +161,7 @@ app.on('ready', () => {
       }, {
         label: '&Close',
         accelerator: 'Ctrl+W',
-        click: function() {
+        click: () => {
           mainWindow.close();
         },
       },],
@@ -170,19 +170,19 @@ app.on('ready', () => {
       submenu: [{
         label: '&Reload',
         accelerator: 'Ctrl+R',
-        click: function() {
+        click: () => {
           mainWindow.restart();
         },
       }, {
         label: 'Toggle &Full Screen',
         accelerator: 'F11',
-        click: function() {
+        click: () => {
           mainWindow.setFullScreen(!mainWindow.isFullScreen());
         },
       }, {
         label: 'Toggle &Developer Tools',
         accelerator: 'Alt+Ctrl+I',
-        click: function() {
+        click: () => {
           mainWindow.toggleDevTools();
         },
       },],
@@ -190,22 +190,22 @@ app.on('ready', () => {
       label: 'Help',
       submenu: [{
         label: 'Learn More',
-        click: function() {
+        click: () => {
           require('shell').openExternal('http://electron.atom.io');
         },
       }, {
         label: 'Documentation',
-        click: function() {
+        click: () => {
           require('shell').openExternal('https://github.com/atom/electron/tree/master/docs#readme');
         },
       }, {
         label: 'Community Discussions',
-        click: function() {
+        click: () => {
           require('shell').openExternal('https://discuss.atom.io/c/electron');
         },
       }, {
         label: 'Search Issues',
-        click: function() {
+        click: () => {
           require('shell').openExternal('https://github.com/atom/electron/issues');
         },
       },],

@@ -29,8 +29,11 @@ An example of a `.eslintrc` follows:
 ```json
 {
   "ecmaFeatures": {
+    "modules": true,
     "blockBindings": true,
-    "jsx": true
+    "jsx": true,
+    "templateStrings": true,
+    "arrowFunctions": true
   },
   "rules": {
     "semi": 2
