@@ -5,10 +5,10 @@ var source = require('vinyl-source-stream');
 
 gulp.task('browserify', function() {
   var bundler = browserify({
-    entries: ['./component/app.js'],
+    entries: ['./src/component/app.js'],
     transform: [reactify],
   });
   return bundler.bundle()
   .pipe(source('app.js'))
-  .pipe(gulp.dest('./compile'));
+  .pipe(gulp.dest('./compile/src'));
 });

@@ -2,7 +2,7 @@
   "name": "atomshell-react-boilerplate",
   "version": "0.0.1",
   "description": "Electron(Atom-Shell) app using React.js",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "gulp",
     "lint": "gulp lint",

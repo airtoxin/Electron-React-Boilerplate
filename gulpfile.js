@@ -9,8 +9,9 @@ function watchAndRebuild() {
 }
 
 function watchAndRecompile() {
-  gulp.watch('./component/**/*', ['browserify']);
-  gulp.watch(['./index.html', './index.js'], ['through']);
+  gulp.watch('./src/component/**/*', ['browserify']);
+  gulp.watch(['./src/index.html', './src/main.js'], ['through']);
+  gulp.watch(['./src/**/*.js', './index.js', '!./src/component/**/*'], ['transpile']);
   gulp.watch('./style/**/*', ['less']);
 }
 
