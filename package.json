@@ -9,7 +9,9 @@
     "transpile": "gulp transpile",
     "syntax": "gulp check-syntax",
     "clean": "rm -rf build/* compile/*",
-    "refactor": "gulp refactor"
+    "refactor": "gulp refactor",
+    "chromedriver": "chromedriver --url-base=wd/hub --port=9515",
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -35,8 +37,12 @@
   },
   "devDependencies": {
     "babel": "^5.8.23",
+    "chromedriver": "^2.19.0",
     "gulp-babel": "^5.2.1",
     "gulp-eslint": "^1.0.0",
-    "gulp-jscs": "^3.0.0"
+    "gulp-jscs": "^3.0.0",
+    "gulp-mocha": "^2.1.3",
+    "mocha": "^2.3.3",
+    "webdriverio": "^3.2.4"
   }
 }
