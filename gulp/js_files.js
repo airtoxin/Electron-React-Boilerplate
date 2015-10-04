@@ -1,5 +1,5 @@
 module.exports = [
-  'component/**/*.js',
   'gulp/**/*.js',
-  '*.js',
+  'src/**/*.js',
+  'test/**/*.js',
 ];
