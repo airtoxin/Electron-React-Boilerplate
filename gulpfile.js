@@ -19,7 +19,9 @@ gulp.task( 'watch-all', function () {
 	watchAndRebuild();
 } );
 
-gulp.task( 'watch-compile-build', runSequence('compile', 'build', 'watch-all') );
+gulp.task( 'watch-compile-build', function () {
+  runSequence('compile', 'build', 'watch-all');
+} );
 
 gulp.task( 'watch-compile', [ 'build' ], watchAndRecompile );
 gulp.task( 'watch-build', [ 'build' ], watchAndRebuild );
