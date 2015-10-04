@@ -1,5 +1,6 @@
 var assert = require('assert');
 var webdriverio = require('webdriverio');
+var Chromedriver = require('appium-chromedriver')
 
 var options = {
     host: "localhost", // Use localhost as chrome driver server
@@ -11,12 +12,23 @@ var options = {
 };
 
 var client = {};
+var driver = {};
 describe('example test', function() {
   this.timeout(10000);
 
   before(function(done) {
-    client = webdriverio.remote(options);
-    client.init(done);
+    driver = new Chromedriver();
+    driver.start(options.desiredCapabilities);
+    driver.on(Chromedriver.EVENT_CHANGED, function(msg) {
+      switch(msg.state) {
+        case Chromedriver.STATE_ONLINE:
+          client = webdriverio.remote(options);
+          client.init(done);
+          break;
+        default:
+          break;
+      }
+    });
   });
 
   // NOTE: http://webdriver.io/api.html
@@ -27,6 +39,10 @@ describe('example test', function() {
   });
 
   after(function(done) {
-    client.end(done);
+    console.log('clean up');
+    client.end(function() {
+      driver.stop();
+      done();
+    });
   });
 });

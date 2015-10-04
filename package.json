@@ -36,8 +36,8 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
+    "appium-chromedriver": "^2.3.5",
     "babel": "^5.8.23",
-    "chromedriver": "^2.19.0",
     "gulp-babel": "^5.2.1",
     "gulp-eslint": "^1.0.0",
     "gulp-jscs": "^3.0.0",

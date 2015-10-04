@@ -45,10 +45,8 @@ An example of a `.eslintrc` follows:
 
 In order to facilitate testing the instructions as specified in the 
 [documentation](https://github.com/atom/electron/blob/master/docs/tutorial/using-selenium-and-webdriver.md)
-are used. ChromeDriver is started and connected to using [WebdriverIO](http://webdriver.io/)
-after which a test runner (Mocha) is used to run through test cases.
+are used. ChromeDriver is started and WebdriverIO connects to ChromeDriver
+before testcases are run.
 
- - Start [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/)
- by running `npm run chromedriver` and 
  - Run tests by running `npm run test`
 
