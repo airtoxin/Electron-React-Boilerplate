@@ -9,7 +9,9 @@ const options = {
   port: 9515,        // "9515" is the port opened by chrome driver.
   desiredCapabilities: {
     browserName: 'chrome',
-    chromeOptions: {binary: 'build/v0.30.2/darwin-x64/Electron.app/Contents/MacOS/Electron'},
+    chromeOptions: {
+      binary: 'build/v0.30.2/darwin-x64/Electron.app/Contents/MacOS/Electron',
+    },
   },
 };
 

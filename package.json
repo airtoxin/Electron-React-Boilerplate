@@ -11,7 +11,7 @@
     "clean": "rm -rf build/* compile/*",
     "refactor": "gulp refactor",
     "chromedriver": "chromedriver --url-base=wd/hub --port=9515",
-    "test": "gulp test"
+    "test": "_TESTING=1 gulp test"
   },
   "repository": {
     "type": "git",
