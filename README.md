@@ -50,3 +50,6 @@ before testcases are run.
 
  - Run tests by running `npm run test`
 
+In case on needs to use `this` inside the tests remember that the fat arrow
+functions handle the housekeeping on [`this` variables somewhat differently](http://willi.am/blog/2015/07/21/mocha-error-this-dot-timeout-is-undefined/).
+If `this` needs to be accessible use the `function() {}` instead of `() => {}`
