@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var jscs = require('gulp-jscs');
 var files = require('./js_files.js');

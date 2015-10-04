@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var atom = require('gulp-atom');
 

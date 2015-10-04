@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var install = require('gulp-install');
 
