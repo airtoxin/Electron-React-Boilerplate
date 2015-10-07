@@ -28,6 +28,3 @@ node_modules
 build/*
 cache/*
 compile/*
-
-.eslintrc
-.jscsrc
