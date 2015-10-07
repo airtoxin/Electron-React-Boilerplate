@@ -1,9 +1,10 @@
-(function() {
-  var React = require('react');
-  var Main = require('./main/Main.js');
-  var remote = window.require('remote');
+'use babel';
 
-  window.React = React;
+import React from 'react';
+import Main from './main/Main.js';
 
-  React.render(<Main />, document.body);
-})();
+var remote = window.require('remote');
+
+window.React = React;
+
+React.render(<Main />, document.body);
