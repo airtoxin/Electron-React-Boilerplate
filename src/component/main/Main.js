@@ -1,14 +1,13 @@
-var React = require('react');
+'use babel';
 
-var Main = React.createClass({
-  displayName: 'Main',
-  render: function() {
+import React from 'react';
+
+export default class Main extends React.Component {
+  render() {
     return (
     <div>
       <p>main content</p>
     </div>
     );
-  },
-});
-
-module.exports = Main;
+  }
+}
