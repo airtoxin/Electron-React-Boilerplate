@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var mocha = require('gulp-mocha');
 var babel = require('babel/register');
 
-gulp.task('test', ['compile', 'build'], function() {
+gulp.task('test', ['rebuild'], function() {
   return gulp
     .src('test/**/*.js', {
       read: false,

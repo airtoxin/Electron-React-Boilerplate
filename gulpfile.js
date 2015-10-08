@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var requireDir = require('require-dir');
 var runSequence = require('run-sequence');
@@ -22,6 +24,10 @@ gulp.task('watch-all', function() {
 
 gulp.task('watch-compile-build', function() {
   runSequence('compile', 'build', 'watch-all');
+});
+
+gulp.task('rebuild', function() {
+  runSequence('compile', 'build');
 });
 
 gulp.task('watch-compile', ['build'], watchAndRecompile);
