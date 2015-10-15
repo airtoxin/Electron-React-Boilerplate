@@ -11,8 +11,7 @@
     "clean": "rm -rf build/* compile/*",
     "refactor": "gulp refactor",
     "chromedriver": "chromedriver --url-base=wd/hub --port=9515",
-    "test": "_TESTING=1 gulp watch-retest",
-    "test:verbose": "gulp watch-retest"
+    "test": "_TESTING=1 gulp test"
   },
   "repository": {
     "type": "git",
@@ -39,8 +38,11 @@
   "devDependencies": {
     "appium-chromedriver": "^2.3.5",
     "babel": "^5.8.23",
+    "electron-mocha": "vidbina/electron-mocha#support-compilers",
+    "electron-prebuilt": "^0.33.8",
     "gulp-babel": "^5.2.1",
     "gulp-eslint": "^1.0.0",
+    "gulp-exec": "^2.1.2",
     "gulp-jscs": "^3.0.0",
     "gulp-mocha": "^2.1.3",
     "mocha": "^2.3.3",
