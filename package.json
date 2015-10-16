@@ -38,6 +38,7 @@
   "devDependencies": {
     "appium-chromedriver": "^2.3.5",
     "babel": "^5.8.23",
+    "babel-core": "^5.8.25",
     "electron-mocha": "vidbina/electron-mocha#support-compilers",
     "electron-prebuilt": "^0.33.8",
     "gulp-babel": "^5.2.1",

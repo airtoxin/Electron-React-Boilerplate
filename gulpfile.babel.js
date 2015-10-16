@@ -1,8 +1,8 @@
-'use strict';
+'use babel';
 
-var gulp = require('gulp');
-var requireDir = require('require-dir');
-var runSequence = require('run-sequence');
+import gulp from 'gulp';
+import requireDir from 'require-dir';
+import runSequence from 'run-sequence';
 
 requireDir('./gulp');
 

@@ -1,11 +1,10 @@
 'use strict';
 
 var gulp = require('gulp');
-var babel = require('babel/register');
 var exec = require('gulp-exec');
 
-var cmd = 'electron-mocha --renderer --compilers js:babel/register'
-var reportOptions = { err: true, stderr: true, stdout: true}
+var cmd = 'electron-mocha --renderer --compilers js:babel/register';
+var reportOptions = { err: true, stderr: true, stdout: true};
 
 gulp.task('test:e2e', function() {
   return gulp
