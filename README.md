@@ -1,5 +1,6 @@
-# Electron-React-Boilerplate
-Electron app with React.js
+# [Deprecated]~~Electron-React-Boilerplate~~
+
+No longer maintained.
 
 ![](./docs/screenshot.png)
 # How to develop
