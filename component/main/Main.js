@@ -5,8 +5,8 @@ var Main = React.createClass({
   render: function() {
     return (
     <div>
-				    <p>main content</p>
-			    </div>
+      <p>main content</p>
+    </div>
     );
   },
 });
