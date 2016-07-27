@@ -1,3 +1,5 @@
-var gulp = require( 'gulp' );
+'use strict';
 
-gulp.task( 'build', [ 'atom' ] );
+var gulp = require('gulp');
+
+gulp.task('build', ['atom']);

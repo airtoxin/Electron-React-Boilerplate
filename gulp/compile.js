@@ -1,8 +1,11 @@
-var gulp = require( 'gulp' );
+'use strict';
 
-gulp.task( 'compile', [
+var gulp = require('gulp');
+
+gulp.task('compile', [
 	'browserify',
 	'through',
+  'transpile',
 	'less',
-	'install'
-] );
+	'install',
+]);

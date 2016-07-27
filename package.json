@@ -2,12 +2,17 @@
   "name": "atomshell-react-boilerplate",
   "version": "0.0.1",
   "description": "Electron(Atom-Shell) app using React.js",
-  "main": "index.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "gulp",
     "lint": "gulp lint",
+    "transpile": "gulp transpile",
     "syntax": "gulp check-syntax",
-    "refactor": "gulp refactor"
+    "clean": "rm -rf build/* compile/*",
+    "refactor": "gulp refactor",
+    "chromedriver": "chromedriver --url-base=wd/hub --port=9515",
+    "test": "_TESTING=1 gulp test",
+    "test:verbose": "gulp test"
   },
   "repository": {
     "type": "git",
@@ -32,8 +37,13 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
+    "appium-chromedriver": "^2.3.5",
     "babel": "^5.8.23",
+    "gulp-babel": "^5.2.1",
     "gulp-eslint": "^1.0.0",
-    "gulp-jscs": "^3.0.0"
+    "gulp-jscs": "^3.0.0",
+    "gulp-mocha": "^2.1.3",
+    "mocha": "^2.3.3",
+    "webdriverio": "^3.2.4"
   }
 }
